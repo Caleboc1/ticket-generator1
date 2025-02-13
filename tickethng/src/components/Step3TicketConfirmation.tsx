@@ -1,5 +1,6 @@
 
 import { TicketData } from "@/pages/Index";
+import barcode from '/barcode.png';
 
 interface Props {
   ticketData: TicketData;
@@ -73,11 +74,16 @@ export function Step3TicketConfirmation({ ticketData, onBookAnother }: Props) {
           )}
         </div>
 
-        <div className="mt-6 pt-6 border-t border-ticket-accent/20">
-          <div className="w-full h-12 flex items-center justify-center">
-            <div className="h-8 w-48 bg-white"></div>
+        <div className="border-t border-dashed border-gray-600 pt-4">
+            <div className="text-center">
+              <img
+               src={barcode}
+               alt="Barcode"
+                className="max-w-full h-auto mx-auto"
+              />
+              <p className="text-xs text-gray-400 mt-2">1 234567 891026</p>
+            </div>
           </div>
-        </div>
       </div>
 
       <div className="flex justify-between pt-4">
