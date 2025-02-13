@@ -1,0 +1,55 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 186 47% 10%;
+    --foreground: 180 20% 99%;
+    --card: 186 47% 15%;
+    --card-foreground: 180 20% 99%;
+    --popover: 186 47% 15%;
+    --popover-foreground: 180 20% 99%;
+    --primary: 187 100% 42%;
+    --primary-foreground: 180 20% 99%;
+    --secondary: 186 47% 20%;
+    --secondary-foreground: 180 20% 99%;
+    --muted: 186 47% 25%;
+    --muted-foreground: 180 10% 80%;
+    --accent: 187 100% 42%;
+    --accent-foreground: 180 20% 99%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 180 20% 99%;
+    --border: 186 47% 25%;
+    --input: 186 47% 25%;
+    --ring: 187 100% 42%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#002A2F] text-white;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.glass-card {
+  @apply bg-opacity-10 backdrop-blur-lg bg-white border border-white/10 shadow-lg;
+}
+
+.ticket-input {
+  @apply bg-[#002A2F] border-[#0E3534] text-white placeholder:text-white/50 focus:border-[rgb(38,182,170)] focus:ring-1 focus:ring-[rgb(38,182,170)] transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-[rgb(38,182,170)] text-white font-medium px-6 py-2 rounded-lg hover:bg-[rgb(38,182,170)]/90 transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply border border-[rgb(38,182,170)]/20 text-white font-medium px-6 py-2 rounded-lg hover:bg-[rgb(38,182,170)]/10 transition-colors duration-200;
+}
